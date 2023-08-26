@@ -23,7 +23,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { svgSpriteTask } from "./gulp/tasks/svg-sprive.js";
+import { svgSpriteTask } from "./gulp/tasks/svg-sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 
@@ -40,7 +40,7 @@ function watcher() {
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, js, images, svgSpriteTask), scss);// Конвертируем шрифты в woff, woff2, создаем файл стилей для шрифтов, (если нужно,соединяем файлы html), изменяем пути файлов, добавляем тег picture к img, 
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

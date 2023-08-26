@@ -1,8 +1,10 @@
-import * as flsFunctions from "./modules/functions.js";
+import * as functions from "./modules/functions.js";
 
-flsFunctions.isWebp();
-
-/*
-import Swiper, { Navigation, Pagination } from 'swiper';
-const swiper = new Swiper();
-*/
+document.addEventListener("DOMContentLoaded", () => {
+	functions.isWebp();
+	functions.slider();
+	functions.modal();
+	functions.scrollToTop();
+	functions.fixedHeader();
+	functions.mobMenu();
+});

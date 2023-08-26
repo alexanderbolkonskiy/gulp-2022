@@ -11,12 +11,14 @@
 		"deploy": "gulp deployFTP --build",
 		"svgSprive": "gulp svgSpriteTask"
 	},
-	"author": "FLS",
+	"author": "Alexey",
 	"license": "ISC",
 	"dependencies": {
 		"gulp-cli": "^2.3.0"
 	},
 	"devDependencies": {
+		"@fortawesome/free-regular-svg-icons": "^6.4.0",
+		"bootstrap": "^4.6.0",
 		"browser-sync": "latest",
 		"del": "latest",
 		"gulp": "latest",
@@ -31,6 +33,7 @@
 		"gulp-notify": "latest",
 		"gulp-plumber": "latest",
 		"gulp-pug": "latest",
+		"gulp-purifycss": "^0.2.0",
 		"gulp-rename": "latest",
 		"gulp-replace": "latest",
 		"gulp-sass": "latest",
@@ -42,7 +45,9 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"normalize.css": "^8.0.1",
 		"sass": "latest",
+		"slick-slider": "^1.8.2",
 		"swiper": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
